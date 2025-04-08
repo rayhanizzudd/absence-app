@@ -42,7 +42,7 @@ const TabsNavigasi = () => {
         options={{
           title: "Beranda",
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }: { focused: boolean }) => (
             <TabIcon focused={focused} icon="home" title="Beranda" />
           ),
         }}
@@ -53,7 +53,7 @@ const TabsNavigasi = () => {
         options={{
           title: "Riwayat",
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }: { focused: boolean }) => (
             <TabIcon focused={focused} icon="history" title="Riwayat" />
           ),
         }}
@@ -64,7 +64,7 @@ const TabsNavigasi = () => {
         options={{
           title: "Profil",
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }: { focused: boolean }) => (
             <TabIcon focused={focused} icon="user-circle" title="Profil" />
           ),
         }}
