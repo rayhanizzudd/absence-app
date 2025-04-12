@@ -9,6 +9,7 @@ module.exports = {
         skyLight: "#C3E9FF",
         skyDark: "#025F96",
         Warm: "#F6F6F6",
+        Green: "#90C67C",
       },
     },
   },

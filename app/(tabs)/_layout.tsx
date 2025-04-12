@@ -9,11 +9,11 @@ function TabIcon({ focused, icon, title }: any) {
       <FontAwesome5
         name={icon}
         size={22}
-        color={focused ? "#C3E9FF" : "white"}
+        color={focused ? "#90C67C" : "white"}
       />
       <Text
         className={`text-xs mt-1 w-full ${
-          focused ? "text-skyLight font-bold" : "text-white"
+          focused ? "text-Green font-bold" : "text-white"
         }`}
       >
         {title}
@@ -29,7 +29,7 @@ const TabsNavigasi = () => {
         tabBarShowLabel: false,
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: "#025F96",
+          backgroundColor: "#BBD8A3",
           height: 64,
           position: "absolute",
           bottom: 0,

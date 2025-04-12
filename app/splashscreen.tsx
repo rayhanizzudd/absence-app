@@ -12,11 +12,11 @@ export default function SplashScreen() {
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
           <View className="flex-1 justify-center items-center w-full">
             {/* Logo di pojok kanan atas */}
-            <Image
+            {/* <Image
               source={require("./../assets/images/logomjk.png")}
               className="absolute top-0 right-0 m-4 h-16 w-16"
               resizeMode="contain"
-            />
+            /> */}
   
             {/* Logo utama di tengah */}
             <Image
@@ -24,20 +24,20 @@ export default function SplashScreen() {
               className="h-48 w-96"
               resizeMode="contain"
             />
-            <Text className="text-2xl font-bold mt-4 text-blue-900">
-              MOJOKERTO SEHAT
+            <Text className="text-2xl font-bold text-blue-900">
+              TEMPE AYU ABSEN APP
             </Text>
-            <Text className="text-sm text-gray-600">By timtujuh UNEJ</Text>
+            <Text className=" text-end text-sm text-gray-600">By Jururu</Text>
   
             {/* Iconsplash di bawah */}
-            <Image
+            {/* <Image
               source={require("./../assets/images/iconsplash.png")}
               className="absolute bottom-0 h-{120} w-{width}"
               style={{
                 width: width, 
               }}
               resizeMode="cover"
-            />
+            /> */}
   
             {/* Tulisan Version di atas iconsplash */}
             <Text
