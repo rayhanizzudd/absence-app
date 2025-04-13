@@ -29,7 +29,7 @@ const Logregpage = () => {
 
         <TouchableOpacity
           className=" w-full bg-lime-500 p-4 rounded-lg mt-4"
-          onPress={() => router.replace("./login")}
+          onPress={() => router.replace("./register")}
         >
           <Text className=" text-center text-blue-500">Register</Text>
         </TouchableOpacity>
