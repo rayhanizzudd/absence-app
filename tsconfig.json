@@ -1,7 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "strict": true,
     "paths": {
       "@/*": ["./app/*"]
