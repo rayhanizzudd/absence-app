@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Image, Dimensions, StatusBar } from 'reac
 import { images } from "@/constants/images";
 import React from 'react'
 const { width } = Dimensions.get("window");
-import { useRouter } from "expo-router";
+import { useRouter, Link } from "expo-router";
 
 const Logregpage = () => {
   const router = useRouter()
@@ -17,21 +17,26 @@ const Logregpage = () => {
       <Text className="absolute top-52 text-3xl font-bold text-blue-900">
         Selamat datang!
       </Text>
+
       <Text className="absolute top-60 text-gray-600">Tempe Ayu Absence</Text>
 
       <View className=" w-full px-4 absolute bottom-20">
-        <TouchableOpacity
-          className="w-full bg-lime-500 p-4 rounded-lg mt-4"
-          onPress={() => router.replace("./login")}
-        >
-          <Text className=" text-center text-blue-500">Login</Text>
+        <TouchableOpacity>
+          <Link
+            href="./login"
+            className="w-full bg-lime-500 p-4 rounded-lg mt-4 text-center text-blue-500"
+          >
+            Login
+          </Link>
         </TouchableOpacity>
 
-        <TouchableOpacity
-          className=" w-full bg-lime-500 p-4 rounded-lg mt-4"
-          onPress={() => router.replace("./register")}
-        >
-          <Text className=" text-center text-blue-500">Register</Text>
+        <TouchableOpacity>
+          <Link
+            href="./register"
+            className="w-full bg-lime-500 p-4 rounded-lg mt-4 text-center text-blue-500"
+          >
+            Register
+          </Link>
         </TouchableOpacity>
       </View>
     </View>

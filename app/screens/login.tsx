@@ -10,6 +10,15 @@ const Login = () => {
       <TouchableOpacity onPress={() => router.replace("./logregpage")}>
         <Text>Kembali</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => router.replace("./logregpage")}>
+        <Text>Kembali</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => router.replace("./logregpage")}>
+        <Text>Kembali</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => router.replace("./logregpage")}>
+        <Text>Kembali</Text>
+      </TouchableOpacity>
     </View>
   );
 }
