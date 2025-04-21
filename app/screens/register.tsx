@@ -83,9 +83,9 @@ const Register = () => {
             </TouchableOpacity>
             <Text className="text-lg font-semibold text-center mt-4">
               Sudah punya akun?{" "}
-              <Link href="./login" className="text-lime-500">
-                Masuk
-              </Link>
+              <TouchableOpacity onPress={() => router.replace("./login")}>
+                <Text className="text-lime-500">Masuk</Text>
+              </TouchableOpacity>
             </Text>
           </View>
         </View>
