@@ -56,10 +56,10 @@ const Register = () => {
               </View>
             </View>
 
-            <TouchableOpacity className="bg-lime-500 w-2/5 rounded-xl px-4 py-2 mt-6">
-              <Text className="text-lg font-semibold text-center">Masuk</Text>
+            <TouchableOpacity className="bg-lime-500 w-2/5 rounded-xl px-4 py-2 mt-6" >
+              <Link href="/beranda" className="text-lg font-semibold text-center">Masuk</Link>
             </TouchableOpacity>
-            
+
               <Text className="text-lg font-semibold text-center mt-4">
                 Belum punya akun?{" "}
                 <TouchableOpacity onPress={() => router.replace("./register")}>
