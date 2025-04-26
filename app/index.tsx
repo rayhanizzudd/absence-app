@@ -10,7 +10,7 @@ export default function Index() {
     setTimeout(() => {
       setIsShowSplash(false);
       // router.replace("/components/imagepicker");
-      router.replace("./beranda");
+      router.replace("./riwayat");
     }, 0);
   }, []);
 
