@@ -52,13 +52,32 @@
 //   },
 // });
 
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, Image, ScrollView } from "react-native";
+import React from "react";
+import { images } from "@/constants/images";
+import DatePickerComponent from "@/components/datetimepicker";
 
-export default function index() {
+export default function Index() {
+  const [selectedDate, setSelectedDate] = React.useState(new Date());
   return (
-    <View>
-      <Text>Halaman Riwayat</Text>
-    </View>
-  )
+    <ScrollView>
+      <View className="relative bg-lime-200 py-12">
+        <View className="absolute inset-0 flex items-center justify-between flex-row px-12 mt-5">
+          <Text className="text-[#4d7c0f] text-2xl font-bold">Riwayat</Text>
+          <Image
+            className="h-22 w-28"
+            source={images.logo}
+            resizeMode="contain"
+          />
+        </View>
+      </View>
+      <View>
+        <DatePickerComponent
+          label="Tanggal Terpilih"
+          onDateChange={(date) => setSelectedDate(date)}
+        />
+      </View>
+    </ScrollView>
+  );
 }
+
