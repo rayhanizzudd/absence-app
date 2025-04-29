@@ -29,13 +29,11 @@ interface User {
   foto_profil_dokter: string | null;
 }
 
-// export default function ProfileScreen() {
-//   return (
-//     <ImageProvider>
-//       <App />
-//     </ImageProvider>
-//   );
-// }
+export default function ProfileScreen() {
+  return (
+      <App />
+  );
+}
 
 function App() {
   const [userData, setUserData] = useState<User | null>(null);
@@ -62,17 +60,17 @@ function App() {
   //   }
   // };
 
-  if (!userData) {
-    return (
-      <Background>
-        <View className="flex-1 justify-center items-center">
-          <Text className="text-skyDark text-xl font-bold">
-            Memuat profil...
-          </Text>
-        </View>
-      </Background>
-    );
-  }
+  // if (!userData) {
+  //   return (
+  //     <Background>
+  //       <View className="flex-1 justify-center items-center">
+  //         <Text className="text-skyDark text-xl font-bold">
+  //           Memuat profil...
+  //         </Text>
+  //       </View>
+  //     </Background>
+  //   );
+  // }
 
   // const handleGantiPassword = async () => {
   //   try {
@@ -117,11 +115,15 @@ function App() {
         {/* <Navbar /> */}
         <ScrollView>
           {/* Header */}
-          <View className="relative pt-12 bg-skyLight rounded-b-[50px] py-28">
+          <View className="relative pt-12 bg-lime-200 rounded-b-[50px] py-28">
             <View className="absolute inset-0 flex items-center justify-between flex-row px-12">
-              <Text className="text-skyDark text-2xl font-bold">Profile</Text>
+              <Text
+                className="text-[#4d7c0f] text-2xl font-bold"
+              >
+                Profile
+              </Text>
               <Image
-                className="h-10 w-12"
+                className="h-22 w-28"
                 source={images.logo}
                 resizeMode="contain"
               />
@@ -130,16 +132,9 @@ function App() {
 
           {/* Foto Profil */}
           <View className="absolute top-28 left-1/2 -translate-x-1/2">
-            {userData.foto_profil_dokter ? (
-              <Image
-                source={{ uri: userData.foto_profil_dokter }}
-                className="w-32 h-32 rounded-full border-4 border-skyDark"
-              />
-            ) : (
-              <View className="w-32 h-32 rounded-full border-4 border-skyDark items-center justify-center bg-gray-200">
-                <Ionicons name="person" size={64} color="#0C4A6E" />
-              </View>
-            )}
+            <View className="w-32 h-32 rounded-full border-4 border-[#4d7c0f] items-center justify-center bg-gray-200">
+              <Ionicons name="person" size={64} color="#4d7c0f" />
+            </View>
           </View>
 
           {/* Card Profil */}
@@ -152,35 +147,25 @@ function App() {
               elevation: 15,
             }}
           >
-            <Text className="font-bold text-lg text-skyDark">Nama</Text>
-            <Text className="text-gray-700">{userData.nama_dokter}</Text>
+            <Text className="font-bold text-lg text-[#4d7c0f]">Nama</Text>
+            <Text className="text-gray-700">Rayhan izzuddin</Text>
 
-            <Text className="font-bold text-lg text-skyDark mt-2">
-              Username
-            </Text>
-
-            <Text className="text-gray-700">{userData.username_dokter}</Text>
-
-            <Text className="font-bold text-lg text-skyDark mt-2">Email</Text>
-            <Text className="text-gray-700">{userData.email_dokter}</Text>
-
-            <Text className="font-bold text-lg text-skyDark mt-2">
+            <Text className="font-bold text-lg text-[#4d7c0f] mt-2">
               Nomor Telepon
             </Text>
-            <Text className="text-gray-700">{userData.notlp_dokter}</Text>
-
-            <Text className="font-bold text-lg text-skyDark mt-2">
-              Spesialis
+            <Text className="text-gray-700">0821021823124</Text>
+            <Text className="font-bold text-lg text-[#4d7c0f] mt-2">
+              Jabatan
             </Text>
-            <Text className="text-gray-700">{userData.spesialis_dokter}</Text>
+            <Text className="text-gray-700">Karyawan</Text>
 
             {/* Ganti Password */}
-            <Text className="font-bold text-lg text-skyDark mt-4">
+            <Text className="font-bold text-lg text-[#4d7c0f] mt-4">
               Ganti Password
             </Text>
-            <View className="w-full h-[2px] bg-skyDark" />
+            <View className="w-full h-[2px] bg-[#4d7c0f]" />
             <View className="flex flex-col items-center">
-              <Text className="w-full pl-1 text-base font-semibold text-skyDark pt-2">
+              <Text className="w-full pl-1 text-base font-semibold text-[#4d7c0f] pt-2">
                 Kata Sandi Lama
               </Text>
               <TextInput
@@ -191,7 +176,7 @@ function App() {
                 className="border-2 rounded-xl border-gray-400 p-2 w-full"
                 placeholderTextColor="#888"
               />
-              <Text className="w-full pl-1 text-base font-semibold text-skyDark pt-2">
+              <Text className="w-full pl-1 text-base font-semibold text-[#4d7c0f] pt-2">
                 Kata Sandi Baru
               </Text>
               <TextInput
@@ -202,7 +187,7 @@ function App() {
                 className="border-2 rounded-xl border-gray-400 p-2 w-full"
                 placeholderTextColor="#888"
               />
-              <Text className="w-full pl-1 text-base font-semibold text-skyDark pt-2">
+              <Text className="w-full pl-1 text-base font-semibold text-[#4d7c0f] pt-2">
                 Konfirmasi Kata Sandi Baru
               </Text>
               <TextInput
@@ -214,7 +199,7 @@ function App() {
                 placeholderTextColor="#888"
               />
               <TouchableOpacity
-                className="p-2 rounded-xl w-2/4 mt-6 bg-skyDark"
+                className="p-2 rounded-xl w-2/4 mt-6 bg-[#4d7c0f]"
                 // onPress={handleGantiPassword}
               >
                 <Text className="text-white text-center font-bold">Simpan</Text>
