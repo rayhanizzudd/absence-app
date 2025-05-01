@@ -71,7 +71,7 @@ export default function Index() {
           />
         </View>
       </View>
-      <View>
+      <View className=" flex flex-col justify-center items-center">
         <DatePickerComponent
           label="Tanggal Terpilih"
           onDateChange={(date) => setSelectedDate(date)}
