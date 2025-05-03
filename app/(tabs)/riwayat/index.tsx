@@ -77,6 +77,13 @@ export default function Index() {
           onDateChange={(date) => setSelectedDate(date)}
         />
       </View>
+      <View className="flex flex-col items-center justify-center mt-10">
+        <Text className="text-lg font-bold text-[#4d7c0f]">
+          Riwayat Kehadiran
+        </Text>
+        <Text className="text-lg font-bold text-[#4d7c0f]">
+          </Text>
+      </View>
     </ScrollView>
   );
 }
